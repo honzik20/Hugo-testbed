@@ -1,0 +1,45 @@
+{{ $showItem := true -}}
+{{ $src := "" -}}
+{{ if .IsNamedParams -}}
+  {{ $src = .Get "src" -}}
+  {{ if eq $src "" -}}
+    {{ errorf "You must provide a 'src' parameter in a snippet- %s." .Position -}}
+  {{ end -}}
+  {{ with .Get "condition" -}}
+    {{ if eq . "" -}}
+      {{ errorf "The snippet 'condition' parameter is empty. Either remove it or provide a value - %s." .Position -}}
+    {{ end -}}
+  {{ end -}}
+{{ else -}}
+  {{ if gt (len .Params) 1 -}}
+    {{ errorf "Use the named parameters 'src' (required) and 'condition' (optional). %s." .Position -}}
+  {{ else -}}
+    {{ $src = .Get 0 -}}
+  {{ end -}}
+{{ end -}}
+{{ $pageCond := .Get "condition" | strings.ToLower | strings.TrimSpace -}}
+{{ if not $pageCond -}}
+  {{ $showItem = true -}}
+{{ else -}}
+  {{ $siteCond := $.Site.Params.condition | strings.ToLower | strings.TrimSpace -}}
+  {{ if or (not $pageCond) (and $siteCond (in $pageCond $siteCond)) -}}
+    {{ $showItem = true -}}
+  {{ else -}}
+    {{ $showItem = false -}}
+  {{ end -}}
+{{ end -}}
+{{ if $showItem -}}
+  {{ $snippetPage := .Site.GetPage $src -}}
+  {{ range where .Page.AllTranslations "Language.Lang" .Page.Params.target_lang -}}
+    {{ $snippetPage = .Site.GetPage $src -}}
+  {{ end -}}
+  {{ with $snippetPage -}}
+    {{/* DEBUG: Let's see what we're dealing with */}}
+    <!-- DEBUG RawContent: {{ .RawContent | htmlEscape }} -->
+    <!-- DEBUG Content: {{ .Content | htmlEscape }} -->
+    <!-- DEBUG Plain: {{ .Plain | htmlEscape }} -->
+    {{- .RawContent | strings.TrimSpace | markdownify | replaceRE `(?s)<p[^>]*>(.*?)</p>` "$1" | safeHTML -}}
+  {{ else -}}
+      {{- errorf "Can't find snippet reference %q in topic %s." $src .Position -}}
+  {{ end -}}
+{{ end -}}
