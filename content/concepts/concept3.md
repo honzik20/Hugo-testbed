@@ -1,5 +1,6 @@
 ---
-title: Concept3 (local)
+title: Concept3 (local, weight 20)
+weight: 20
 ---
 
 
