@@ -4,3 +4,8 @@ title: My New Hugo Site
 module:
   imports:
   - path: github.com/theNewDynamic/gohugo-theme-ananke/v2
+  - path: github.com/honzik20/hugo-module-test
+    mounts:
+    - source: content
+      target: content
+

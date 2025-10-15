@@ -1,2 +1,6 @@
+github.com/honzik20/hugo-module-test v0.0.0-20251009144440-7722017f8f51 h1:NeNmcLHfXEsHbDpUK/pVBuUmxC1kony9HWGnEzzKN0k=
+github.com/honzik20/hugo-module-test v0.0.0-20251009144440-7722017f8f51/go.mod h1:01OppvZQT5+Qjr6mRr1B5pIaM+sLjrVk+ghTGoBxYrY=
+github.com/honzik20/hugo-module-test v0.0.0-20251014133640-b96c4124a67e h1:5n3XzgBCdFpYN8rhV1eRWXv9p4hxDDjZOT/BKG7LOSw=
+github.com/honzik20/hugo-module-test v0.0.0-20251014133640-b96c4124a67e/go.mod h1:01OppvZQT5+Qjr6mRr1B5pIaM+sLjrVk+ghTGoBxYrY=
 github.com/theNewDynamic/gohugo-theme-ananke/v2 v2.12.1 h1:SxVd2+ADMcMiNSsCnAdBnoMMZAUfwHDCvDExZ5fRseo=
 github.com/theNewDynamic/gohugo-theme-ananke/v2 v2.12.1/go.mod h1:+a6uqEsCq0+rqHWY5W5QA3P9DNnxcbyCw+CVEB+Uveg=

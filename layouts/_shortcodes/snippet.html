@@ -34,10 +34,6 @@
     {{ $snippetPage = .Site.GetPage $src -}}
   {{ end -}}
   {{ with $snippetPage -}}
-    {{/* DEBUG: Let's see what we're dealing with */}}
-    <!-- DEBUG RawContent: {{ .RawContent | htmlEscape }} -->
-    <!-- DEBUG Content: {{ .Content | htmlEscape }} -->
-    <!-- DEBUG Plain: {{ .Plain | htmlEscape }} -->
     {{- .RawContent | strings.TrimSpace | markdownify | replaceRE `(?s)<p[^>]*>(.*?)</p>` "$1" | safeHTML -}}
   {{ else -}}
       {{- errorf "Can't find snippet reference %q in topic %s." $src .Position -}}
