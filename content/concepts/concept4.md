@@ -1,5 +1,5 @@
 ---
-title: Concept4 (local))
+title: Concept4 (local)
 ---
 
 
