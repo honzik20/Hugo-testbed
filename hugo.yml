@@ -6,12 +6,16 @@ module:
   - path: github.com/theNewDynamic/gohugo-theme-ananke/v2
   - path: github.com/honzik20/hugo-module-test
     mounts:
-    - source: content/en/
-      target: content/
-      lang: en
-    - source: content/fr/
-      target: content/
-      lang: fr
+# Comment out the two lines below and uncomment the 
+# next section to reproduce the xref bug 
+    - source: content
+      target: content
+#    - source: content/en/
+#      target: content/
+#      lang: en
+#    - source: content/fr/
+#      target: content/
+#      lang: fr
 
 languages:
   en:
