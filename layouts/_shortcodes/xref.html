@@ -1,0 +1,23 @@
+{{ $xrefPath := .Get 0 -}}
+{{ $xrefPage := .Site.GetPage $xrefPath -}}
+{{- if not $xrefPage -}}
+  {{/* Try to find in current language pages */}}
+  {{ $currentLang := .Page.Language.Lang -}}
+  {{ range .Site.AllPages -}}
+    {{ if eq .Language.Lang $currentLang -}}
+      {{ if and .File (eq (strings.TrimSuffix .File.Dir "/") $xrefPath) -}}
+        {{ $xrefPage = . -}}
+        {{ break -}}
+      {{ end -}}
+    {{ end -}}
+  {{ end -}}
+{{- end -}}
+{{- if $xrefPage -}}
+  {{- if $xrefPage.Params.headless -}}
+    {{- $xrefPage.Title -}}
+  {{- else -}}
+    <a href="{{ $xrefPage.RelPermalink }}">{{ $xrefPage.Title }}</a>
+  {{- end -}}
+{{- else -}}
+  {{- errorf "Can't find xref %q in topic %s." $xrefPath .Position -}}
+{{- end -}}
