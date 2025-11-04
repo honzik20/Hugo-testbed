@@ -1,4 +1,8 @@
+dev.azure.com/horibatestautomation/HTA/_git/enterprise-help-common.git v0.0.0-20251030153503-8d4bd7eb43a0 h1:lC7s4XZJviG40SHYEcm12lGJ5OF0jVDTZelkRceo/sY=
+dev.azure.com/horibatestautomation/HTA/_git/enterprise-help-common.git v0.0.0-20251030153503-8d4bd7eb43a0/go.mod h1:tWu5RLF3DC4idoW9DbtbbxHyLl7SvtaVRqmAVwqBl88=
 github.com/honzik20/hugo-module-test v0.0.0-20251030141909-db84fbc282ad h1:MHJJI9LF8PEMcMsl1RC4EXkLrStxz+MhoyDQr8VH1zU=
 github.com/honzik20/hugo-module-test v0.0.0-20251030141909-db84fbc282ad/go.mod h1:01OppvZQT5+Qjr6mRr1B5pIaM+sLjrVk+ghTGoBxYrY=
+github.com/honzik20/hugo-module-test v0.0.0-20251104090016-53b966df2f63 h1:bB9WkLLxDNaLFfKTzu1v8TMgNzWV+XqD8HF+Uan+zko=
+github.com/honzik20/hugo-module-test v0.0.0-20251104090016-53b966df2f63/go.mod h1:01OppvZQT5+Qjr6mRr1B5pIaM+sLjrVk+ghTGoBxYrY=
 github.com/theNewDynamic/gohugo-theme-ananke/v2 v2.12.1 h1:SxVd2+ADMcMiNSsCnAdBnoMMZAUfwHDCvDExZ5fRseo=
 github.com/theNewDynamic/gohugo-theme-ananke/v2 v2.12.1/go.mod h1:+a6uqEsCq0+rqHWY5W5QA3P9DNnxcbyCw+CVEB+Uveg=
