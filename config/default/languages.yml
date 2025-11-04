@@ -1,0 +1,10 @@
+en:
+  title: Help
+  languageName: English
+  weight: 1
+  contentDir: "content/en"
+fr:
+  title: Aide en ligne
+  languageName: French
+  weight: 1
+  contentDir: "content/fr"

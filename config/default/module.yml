@@ -1,0 +1,10 @@
+imports:
+- path: github.com/theNewDynamic/gohugo-theme-ananke/v2
+- path: github.com/honzik20/hugo-module-test
+  mounts:
+  - source: common-content/en/
+    target: content
+    lang: en
+  - source: common-content/fr/
+    target: content  
+    lang: fr

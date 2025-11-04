@@ -1,5 +1,5 @@
 ---
-title: Concept4 (French, local, weight 10)
+title: Concept4 (FR, local, weight 40)
 weight: 10
 ---
 
