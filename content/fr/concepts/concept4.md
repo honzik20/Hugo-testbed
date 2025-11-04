@@ -1,6 +1,6 @@
 ---
 title: Concept4 (FR, local, weight 40)
-weight: 10
+weight: 40
 ---
 
 {{< xref "concept4" >}}
